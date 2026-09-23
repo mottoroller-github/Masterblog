@@ -12,9 +12,15 @@
     "content": "This is another post."
   },
   {
-    "id": 3,
+    "id": 5,
     "author": "Max",
     "title": "Testing add",
-    "content": "Test add functionatily"
+    "content": "Add func test"
+  },
+  {
+    "id": 6,
+    "author": "Max",
+    "title": "Testing update again",
+    "content": "Update once more"
   }
 ]

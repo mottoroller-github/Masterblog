@@ -20,7 +20,14 @@
         <p>{{ post.content }}</p>
 
         <div class="post-actions">
-            <a href="{{ url_for('delete', post_id=post.id) }}" class="delete-button">Delete</a>
+            <a href="{{ url_for('update', post_id=post.id) }}"
+               class="edit-button">
+                Edit
+            </a>
+            <a href="{{ url_for('delete', post_id=post.id) }}"
+               class="delete-button">
+                Delete
+            </a>
         </div>
     </div>
     {% endfor %}

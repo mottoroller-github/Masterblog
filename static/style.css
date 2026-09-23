@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #F5F5F5;
-    padding: 20px;
     color: #333;
     max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
@@ -13,7 +17,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Navigation links */
+/* Navigation */
 .navigation {
     margin: 20px 0 30px;
 }
@@ -31,12 +35,6 @@ h1 {
 
 .navigation a:hover {
     background-color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #333;
-    text-decoration: underline;
 }
 
 /* Blog posts */
@@ -57,7 +55,7 @@ a:hover {
     margin: 10px 0;
 }
 
-/* Add post form */
+/* Forms */
 .form-container {
     background-color: #FFF;
     border: 1px solid #DDD;
@@ -81,7 +79,6 @@ a:hover {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #CCC;
     border-radius: 5px;
@@ -101,7 +98,7 @@ a:hover {
     resize: vertical;
 }
 
-/* Buttons */
+/* Form buttons */
 button {
     background-color: #4F4F4F;
     color: #FFF;
@@ -110,24 +107,23 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
     background-color: #333;
 }
 
-/* Navigation / back link */
-.navigation {
-    margin-top: 20px;
-}
-
+/* Post actions */
 .post-actions {
     margin-top: 15px;
+    display: flex;
+    gap: 10px;
 }
 
+.edit-button,
 .delete-button {
     display: inline-block;
-    background-color: #B54A4A;
     color: #FFF;
     text-decoration: none;
     padding: 8px 14px;
@@ -137,8 +133,18 @@ button:hover {
     transition: background-color 0.2s ease;
 }
 
-.delete-button:hover {
-    background-color: #933838;
-    text-decoration: none;
+.edit-button {
+    background-color: #5B7FA3;
 }
 
+.edit-button:hover {
+    background-color: #456582;
+}
+
+.delete-button {
+    background-color: #B54A4A;
+}
+
+.delete-button:hover {
+    background-color: #933838;
+}
