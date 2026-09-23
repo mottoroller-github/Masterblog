@@ -40,7 +40,8 @@ def add():
             "id": max([post["id"] for post in blog_posts], default=0) + 1,
             "author": author,
             "title": title,
-            "content": content
+            "content": content,
+            "likes": 0
         }
 
         blog_posts.append(new_post)
@@ -82,6 +83,20 @@ def delete(post_id):
         return "Post not found", 404
 
     save_posts(filtered_posts)
+
+    return redirect(url_for('index'))
+
+@app.route('/like/<int:post_id>')
+def like(post_id):
+    blog_posts = load_posts()
+    post = fetch_post_by_id(blog_posts, post_id)
+
+    if post is None:
+        return "Post not found", 404
+
+    post["likes"] += 1
+
+    save_posts(blog_posts)
 
     return redirect(url_for('index'))
 

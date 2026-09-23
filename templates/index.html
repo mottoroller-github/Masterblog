@@ -20,14 +20,9 @@
         <p>{{ post.content }}</p>
 
         <div class="post-actions">
-            <a href="{{ url_for('update', post_id=post.id) }}"
-               class="edit-button">
-                Edit
-            </a>
-            <a href="{{ url_for('delete', post_id=post.id) }}"
-               class="delete-button">
-                Delete
-            </a>
+            <a href="{{ url_for('like', post_id=post.id) }}" class="like-button">❤️ Like ({{ post.likes }})</a>
+            <a href="{{ url_for('update', post_id=post.id) }}" class="edit-button">Edit</a>
+            <a href="{{ url_for('delete', post_id=post.id) }}" class="delete-button">Delete</a>
         </div>
     </div>
     {% endfor %}

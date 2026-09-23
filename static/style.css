@@ -148,3 +148,20 @@ button:hover {
 .delete-button:hover {
     background-color: #933838;
 }
+
+.like-button {
+    display: inline-block;
+    background-color: #E6A23C;
+    color: #FFF;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.like-button:hover {
+    background-color: #C88724;
+    text-decoration: none;
+}
